@@ -5,12 +5,15 @@ public class Cat {
   private String name;
   private String furColor;
   private int age; 
+  private boolean isFemale;
 
+  private int counter;
 
-public Cat(String name, String furColor, int age) {
+public Cat(String name, String furColor, int age, boolean isFemale) {
     this.name = name;
     this.furColor = furColor;
     this.age = age;
+    this.isFemale = isFemale;
   }
 
 public String getStringAttributes(String op) {
@@ -25,9 +28,30 @@ public String getStringAttributes(String op) {
 }
 
 public String getAge() {
+  if (isFemale) {
+    return checkCompliance();
+  } else {
     return String.valueOf(age);
   }
+}
 
+private String checkCompliance() {
 
+  counter++;
+
+    switch (counter) {
+      case 1:
+        return "Das geht Dich nix an, Frauen fragt man sowas nicht!";
+      case 2:
+        return "Hatte ich Dir nicht eben schon gesagt, das man sowas Frauen nicht fragt?";
+      case 3:
+        return "Es reicht, noch einmal und es platzt hier die Bombe!";
+      case 4:
+        return "%#1!  BUUUUMMMMM  !1#%: Der stellt jetzt keine Fragen mehr!!!";
+      default:
+        return "!!! Es ist AUS !!!";
+    }
+      
+}    
 }
   
