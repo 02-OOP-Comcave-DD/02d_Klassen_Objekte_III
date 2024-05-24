@@ -41,7 +41,7 @@ private String checkCompliance() {
       case 3:
         return "Es reicht, noch einmal und es platzt hier die Bombe!";
       case 4:
-        return "%#1!  BUUUUMMMMM  !1#%: Der stellt jetzt keine Fragen mehr!!!";
+        return "%#1!BUUUUMMMMM!1#%: Der stellt jetzt keine Fragen mehr!!!";
       default:
         return "!!! Es ist AUS !!!";
     }
